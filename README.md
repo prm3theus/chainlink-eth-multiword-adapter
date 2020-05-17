@@ -2,7 +2,7 @@
 
 Current implementation of chainlink does not support the ability to send multiple words through an adapater pipeline ending in `Ethtx`.
 
-This repo circumvents this by encoding comma delimiter data as a `bytes32` word, that is then parsed to seperate strings.
+This repo circumvents this by encoding comma delimiter data as a `bytes32` word using `EthBytes32` that is then parsed to seperate strings in a contract.
 
 ```
 ex: "1,200" -> "0x312c323030000000000000000000000000000000000000000000000000000000" as input
