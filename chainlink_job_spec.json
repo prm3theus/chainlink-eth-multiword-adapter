@@ -1,43 +1,43 @@
 {
-  "initiators": [
-    {
-      "type": "cron",
-      "params": {
-        "schedule": "0 * * * * *"
-      }
-    }
-  ],
-  "tasks": [
-    {
-      "type": "tor-v6",
-      "confirmations": null,
-      "params": {
-      }
-    },
-    {
-      "type": "copy",
-      "confirmations": null,
-      "params": {
-        "copyPath": [
-          "STATUS"
-        ]
-      }
-    },
-    {
-      "type": "ethbytes32",
-      "confirmations": null,
-      "params": {
-      }
-    },
-    {
-      "type": "ethtx",
-      "confirmations": null,
-      "params": {
-        "address": "0x4396eb93ac1ffe97a2a68ea4c6b34cd123fb74f8",
-        "functionSelector": "update(bytes32)"
-      }
-    }
-  ],
-  "startAt": null,
-  "endAt": null
+	"initiators": [
+		{
+			"type": "cron",
+			"params": {
+				"schedule": "0 * * * * *"
+			}
+		}
+	],
+	"tasks": [
+		{
+			"type": "tor-<bridge-name>",
+			"confirmations": null,
+			"params": {
+				"endPoint": "<endpoint>.onion"
+			}
+		},
+		{
+			"type": "copy",
+			"confirmations": null,
+			"params": {
+				"copyPath": [
+					"STATUS"
+				]
+			}
+		},
+		{
+			"type": "ethbytes32",
+			"confirmations": null,
+			"params": {}
+		},
+		{
+			"type": "ethtx",
+			"confirmations": null,
+			"params": {
+				"address": "<0xaddress>",
+				"functionSelector": "update(bytes32)"
+			}
+		}
+	],
+	"startAt": null,
+	"endAt": null
 }
